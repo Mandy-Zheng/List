@@ -50,8 +50,6 @@ struct node * remove_list(struct node *front, int data){
   if(reconnect==NULL){
     front=front->next;
   }else{
-    printf("%p\n",reconnect );
-    printf("%p\n",delete);
     reconnect->next=delete->next;
   }
   free(delete);
