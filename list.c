@@ -11,23 +11,26 @@ void print_list(struct node *p){
     if (temp==p){
       printf("%d",temp->i);
     }
-    printf(", %d",temp->i);
+    else{
+      printf(", %d",temp->i);
+    }
     temp=temp->next;
   }
-  printf("]\n");
+  printf("]");
 }
 struct node * insert_front(struct node *p, int i){
   struct node *pnew;
   pnew=malloc(sizeof(int)+sizeof(struct node *));
   pnew->i=i;
   pnew->next=p;
-  return pnew;
+  p=pnew;
+  return p;
 }
 struct node * free_list(struct node* p){
   struct node* sub;
   while (p!=NULL) {
     sub=p;
-    printf("freeing %d\n", sub->i);
+    printf("Freeing: %d\n", sub->i);
     p=p->next;
     free(sub);
   }
