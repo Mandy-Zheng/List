@@ -31,6 +31,7 @@ struct node * free_list(struct node* p){
     p=p->next;
     free(sub);
   }
+  p=0;
   return p;
 }
 

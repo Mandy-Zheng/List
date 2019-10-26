@@ -6,6 +6,11 @@
 
 int main(int argc, char const *argv[]) {
   struct node *p;
+  printf("Current List is empty:\n");
+  printf("Expected: []\n");
+  printf("Actual:");
+  print_list(p);
+  printf("\n" );
   print_list(p);
   p=insert_front(p,900);
   p=insert_front(p,800);
